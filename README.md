@@ -1,3 +1,3 @@
- nom | prenom
- -|-
- Charles | Bondje
+ nom|prenom
+--|--
+Bondje|Charles A.D.
