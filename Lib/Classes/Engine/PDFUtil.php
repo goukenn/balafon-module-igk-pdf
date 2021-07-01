@@ -798,7 +798,6 @@ class PDFUtil extends \FPDF
                 ];
             }            
         }
-    //  igk_wln_e($output, $s);
         return $output;
 
     }

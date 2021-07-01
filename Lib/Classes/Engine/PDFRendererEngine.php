@@ -3,13 +3,14 @@
 namespace igk\pdf\Engine;
 
 use FPDF;
+use IGK\System\Html\RendererEngineBase;
 use IGKColor;
 use IGKHtmlItem;
 use IGKHtmlUtils;
 use stdClass;
 use function igk_getv as getv;
 
-class PDFRendererEngine
+class PDFRendererEngine extends RendererEngineBase
 {
     private $m_fpdf;
     private $m_options;
@@ -91,7 +92,7 @@ class PDFRendererEngine
     public function GetFontSize(){
         return PDFUtil::GetFontSize($this->m_fpdf);
     }
-    public function Render($node, $options)
+    public function Render($node, $options=null)
     {
         $tab = array($node);
         $rdinfo = (object)[
